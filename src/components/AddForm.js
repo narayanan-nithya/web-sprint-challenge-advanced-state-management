@@ -63,7 +63,7 @@ const AddForm = (props) => {
                 <textarea onChange={handleChange} value={state.description} name="description" id="description" />
             </div>
             {
-                formError === true && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {errorMessage}</div>
+                formError === true && <div data-testid="errorAlert" className="alert alert-danger" role="alert">Error: {formError}</div>
             }
             <button>Submit Smurf</button>
         </form>

@@ -9,7 +9,7 @@ export const initialState = {
     }],
     isLoading: false,
     fetchError: "",
-    formError: false,
+    formError: false
 
 };
 
@@ -18,35 +18,26 @@ const reducer = ( state = initialState, action )=> {
         case (SMURF_LOAD):
             return({
                 ...state,
-                smurfs: [],
                 isLoading: true,
-                fetchError: "",
-                formError: "",
+                
             });
         case (SMURF_SUCCESS):
             return({
                 ...state, 
                 smurfs: action.payload,
                 isLoading: false,
-                fetchError: "",
-                formError: "",
+
             });
         case (SMURF_FAILED):
             return({
                 ...state, 
-                smurfs: [],
                 isLoading: false,
                 fetchError: action.payload
-                formError: "",
             });
         case (SMURF_ADD):
             const freshSmurf = {
                 ...state,
-                id:"253009",
-                name: action.payload,
-                position:action.payload,
-                nickname: action.payload,
-                description: action.payload,
+               smurfs: [...state.smurfs, action.payload]
             };
             return {
                 ...state,
@@ -55,10 +46,8 @@ const reducer = ( state = initialState, action )=> {
         case (SMURF_ERROR):
         return ({
             ...state,
-            smurfs: [],
             isLoading: false,
-            fetchError:"",
-            formError: true,
+            formError: action.payload,
         });
 
         default:
