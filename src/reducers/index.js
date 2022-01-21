@@ -1,4 +1,4 @@
-
+import { SMURF_LOAD, SMURF_SUCCESS, SMURF_FAIL, SMURF_ERROR, SMURF_ADD}
 export const initialState = {
 }
 
