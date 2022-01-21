@@ -1,9 +1,70 @@
-import { SMURF_LOAD, SMURF_SUCCESS, SMURF_FAIL, SMURF_ERROR, SMURF_ADD}
+import { SMURF_LOAD, SMURF_SUCCESS, SMURF_FAILED, SMURF_ERROR, SMURF_ADD} from "../actions"
 export const initialState = {
-}
+   smurfs:  [{
+          id:"253009",
+          name:'Freshie',
+          position:'Gym Instructor',
+          nickname: 'Fre',
+          description: 'Best gym instructor for the beautiful smurf village. '
+    }],
+    isLoading: false,
+    fetchError: "",
+    formError: false,
 
-const reducer = ()=>{
-}
+};
+
+const reducer = ( state = initialState, action )=> {
+    switch (action.type){
+        case (SMURF_LOAD):
+            return({
+                ...state,
+                smurfs: [],
+                isLoading: true,
+                fetchError: "",
+                formError: "",
+            });
+        case (SMURF_SUCCESS):
+            return({
+                ...state, 
+                smurfs: action.payload,
+                isLoading: false,
+                fetchError: "",
+                formError: "",
+            });
+        case (SMURF_FAILED):
+            return({
+                ...state, 
+                smurfs: [],
+                isLoading: false,
+                fetchError: action.payload
+                formError: "",
+            });
+        case (SMURF_ADD):
+            const freshSmurf = {
+                ...state,
+                id:"253009",
+                name: action.payload,
+                position:action.payload,
+                nickname: action.payload,
+                description: action.payload,
+            };
+            return {
+                ...state,
+                smurfs: [...state.smurfs, freshSmurf]
+            };
+        case (SMURF_ERROR):
+        return ({
+            ...state,
+            smurfs: [],
+            isLoading: false,
+            fetchError:"",
+            formError: true,
+        });
+
+        default:
+            return state;
+    };
+};
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
 export default reducer;
