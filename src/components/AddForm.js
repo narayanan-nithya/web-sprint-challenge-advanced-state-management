@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 //1. Connect the errorMessage, setError and addSmurf actions to the AddForm component.
 import { connect } from 'react-redux';
-import { addSmurf, setError} from '../actions';
+import { addSmurf, setError} from '../actions/index.js';
 
 //Task List:
 

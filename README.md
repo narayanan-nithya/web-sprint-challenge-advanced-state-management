@@ -67,9 +67,9 @@ In this project, you will build the reducer, actions and basic redux connects to
 ### Complete actions/index.js
   Add in the action creators and action constants needed to add a smurf to state and fetch smurfs from the server. **If at all possible, add in action cases one at a time, instead of all at once. Test your state connects and reducer cases as necessary.**
 
-  * [ ] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retrieve all smurfs from the api. Save the result of to our state and show an error if one is made.
-  * [ ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
-  * [ ] Add a standard action that allows us to set the value of the error message slice of state.
+  * [ x] Add a thunk action called fetchSmurfs that triggers a loading status display in our application, performs an axios call to retrieve all smurfs from the api. Save the result of to our state and show an error if one is made.
+  * [x ] Add a standard action that allows us to add new smurf (including the name, nickname, position, summary).
+  * [ x] Add a standard action that allows us to set the value of the error message slice of state.
   
 ### Complete App.js
   Connect component to the fetchSmurfs action.
@@ -113,8 +113,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What problem does the context API help solve?
 
+# context API helps store data on a context object and retrieve that data in the necessary components thereby eliminating the cumbersome process of passing the states through props for different components. 
+
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 
+# Actions:  Object that requires a property of type - which is essentially a value that describes what change you want to make to the state. 
+
+# Reducers: It's a function and it's job is to take an old version of state and return a new state version. 
+
+# Store: Yields an object with a dispatch, subscribe, getState and replace reducer methods. 
+
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+ # It is a middleware which allows us to dispatch async actions.
 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+
+# Reducer- I found the concepts of dispatch , payload easier to understand from the app building point of view. 

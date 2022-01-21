@@ -1,4 +1,4 @@
-import { SMURF_LOAD, SMURF_SUCCESS, SMURF_FAILED, SMURF_ERROR, SMURF_ADD} from "../actions"
+import { SMURF_LOAD, SMURF_SUCCESS, SMURF_FAILED, SMURF_ERROR, SMURF_ADD} from "../actions/index.js"
 export const initialState = {
    smurfs:  [{
           id:"253009",
