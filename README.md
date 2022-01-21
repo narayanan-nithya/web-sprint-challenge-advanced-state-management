@@ -80,9 +80,9 @@ In this project, you will build the reducer, actions and basic redux connects to
 ### Complete components/SmurfList.js
   Connect this component to your smurfs and loading screen state slices.
   
-  * [ ] Connect the smurfs and loading state values to the SmurfList component.
-  * [ ] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
-  * [ ] Replace the static isLoading variable with the state loading variable.
+  * [ x] Connect the smurfs and loading state values to the SmurfList component.
+  * [ x] Replace the single Smurf component instance with a map return a Smurf component for each entry in the smurfs list.
+  * [ x] Replace the static isLoading variable with the state loading variable.
 
 ### Complete components/AddForm.js
   Connect this component to the error state slice, setError and addSmurf actions. Complete the form handling code.
@@ -102,9 +102,9 @@ In this project, you will build the reducer, actions and basic redux connects to
 * Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work.
 
 ## Submission format
-* [ ] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
-* [ ] Check Codegrade before the deadline to compare its results against your local tests.
-* [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
+* [ x] Submit via Codegrade by committing and pushing any new changes to **your main branch.**
+* [x ] Check Codegrade before the deadline to compare its results against your local tests.
+* [ x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback. For more information on how to access and read your feedback, check [here](https://www.notion.so/lambdaschool/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a)
 * [ ] New commits will be evaluated by Codegrade if pushed before the sprint challenge deadline.
 
 ## Interview Questions
